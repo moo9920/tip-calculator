@@ -4,7 +4,7 @@
 
 SpliTip is a sleek, single-screen interactive web application engineered to calculate tips and split bills across groups with absolute precision. Built entirely on a native vanilla frontend stack, the application processes inputs reactively in real time—eliminating the need for a legacy "Calculate" button—while introducing defensive UX logic to mitigate floating-point rounding discrepancies and input breaking errors.
 
-👉 **[Live Production Demo](https://tip-calculator.onrender.com)** *(Replace this with your actual Render URL)*
+👉 **[Live Production Demo](https://tip-calculator-sg7v.onrender.com/)** *(Replace this with your actual Render URL)*
 
 ---
 
