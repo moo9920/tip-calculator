@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpliTip // Precision Bill Splitter</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="calculator-container">
+    <header class="logo">
+      <h1>SPLI<span>TIP</span></h1>
+    </header>
+
+    <div class="card">
+      <section class="input-section">
+        <div class="input-group" id="group-bill">
+          <div class="label-row">
+            <label for="bill-input">Bill Amount ($)</label>
+            <span class="error-msg" id="bill-error" aria-live="polite"></span>
+          </div>
+          <div class="input-wrapper">
+            <span class="input-icon">$</span>
+            <input type="number" id="bill-input" step="0.01" placeholder="0.00" min="0" inputmode="decimal">
+          </div>
+        </div>
+
+        <div class="input-group" id="group-tip">
+          <div class="label-row">
+            <label>Select Tip %</label>
+            <span class="error-msg" id="tip-error" aria-live="polite"></span>
+          </div>
+          <div class="tip-grid">
+            <button type="button" class="tip-btn" data-percent="10">10%</button>
+            <button type="button" class="tip-btn" data-percent="15">15%</button>
+            <button type="button" class="tip-btn" data-percent="20">20%</button>
+            <button type="button" class="tip-btn" data-percent="25">25%</button>
+            <input type="number" id="custom-tip-input" placeholder="Custom" min="0" max="100" inputmode="numeric">
+          </div>
+        </div>
+
+        <div class="input-group" id="group-people">
+          <div class="label-row">
+            <label for="people-input">Number of People</label>
+            <span class="error-msg" id="people-error" aria-live="polite"></span>
+          </div>
+          <div class="input-wrapper">
+            <span class="input-icon">👤</span>
+            <input type="number" id="people-input" step="1" placeholder="1" min="1" inputmode="numeric">
+          </div>
+        </div>
+      </section>
+
+      <section class="output-section">
+        <div class="display-container">
+          <div class="display-row">
+            <div>
+              <h2>Total Tip</h2>
+              <p class="per-person">overall</p>
+            </div>
+            <div class="amount" id="total-tip-display">$0.00</div>
+          </div>
+
+          <div class="display-row">
+            <div>
+              <h2>Grand Total</h2>
+              <p class="per-person">bill + tip</p>
+            </div>
+            <div class="amount" id="grand-total-display">$0.00</div>
+          </div>
+
+          <div class="display-row highlighted">
+            <div>
+              <h2>Total Per Person</h2>
+              <p class="per-person">split evenly</p>
+            </div>
+            <div class="amount-large" id="per-person-display">$0.00</div>
+          </div>
+        </div>
+
+        <button type="button" id="reset-btn" disabled>RESET</button>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
